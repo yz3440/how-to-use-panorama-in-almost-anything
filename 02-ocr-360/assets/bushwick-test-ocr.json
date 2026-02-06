@@ -1,0 +1,259 @@
+{
+  "image_path": "assets/bushwick-test-pano.jpg",
+  "perspective_preset": "custom",
+  "perspective_presets": null,
+  "results": [
+    {
+      "text": "shone:",
+      "confidence": 0.5,
+      "yaw": -205.285287723269,
+      "pitch": 1.0824949273916105,
+      "width": 8.301598477479104,
+      "height": 4.160623842172138,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "MO",
+      "confidence": 0.5,
+      "yaw": -141.05668741747346,
+      "pitch": 0.9159882032539048,
+      "width": 1.482249229770522,
+      "height": 1.1655643443147068,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "NY STATE INSPECTI",
+      "confidence": 1.0,
+      "yaw": -50.1626846868259,
+      "pitch": 14.647979937852668,
+      "width": 4.672421970822967,
+      "height": 2.201098706330537,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "WHEEL ALIEN MEX",
+      "confidence": 0.5,
+      "yaw": -49.9714529194776,
+      "pitch": 13.242452943164261,
+      "width": 4.624029171895643,
+      "height": 2.1020196981481263,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "U HAUL",
+      "confidence": 0.5,
+      "yaw": -68.78969351368501,
+      "pitch": -1.9878984943863474,
+      "width": 6.221155587524734,
+      "height": 1.683413010870686,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "RIGHT EQUIPMENT... LOWEST COST!",
+      "confidence": 1.0,
+      "yaw": -68.7896934123557,
+      "pitch": -4.239462351301235,
+      "width": 14.00258705558412,
+      "height": 1.159491991599352,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "$1925",
+      "confidence": 0.5,
+      "yaw": -65.05609467951953,
+      "pitch": -8.595911417923373,
+      "width": 6.843829374893797,
+      "height": 3.2559165541476887,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "\u2022 FUEL EFFICIENT",
+      "confidence": 1.0,
+      "yaw": -73.63751567709087,
+      "pitch": -11.821488332628887,
+      "width": 6.129223071287463,
+      "height": 0.9573842061764211,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "\u2022 EASY TO DRIVE",
+      "confidence": 1.0,
+      "yaw": -73.56087643732965,
+      "pitch": -12.774833319749744,
+      "width": 6.277307129096577,
+      "height": 0.9517317101311527,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "\u2022 TOW YOUR CAR",
+      "confidence": 1.0,
+      "yaw": -73.25492515344787,
+      "pitch": -13.712236848494738,
+      "width": 6.56222331272175,
+      "height": 0.9733540509246872,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "RESERVE TODAY E",
+      "confidence": 1.0,
+      "yaw": -64.71471214761138,
+      "pitch": -12.933780349246875,
+      "width": 5.581558898074967,
+      "height": 0.9492619826043622,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "cilaut.com.",
+      "confidence": 0.30000001192092896,
+      "yaw": -64.64666484519445,
+      "pitch": -13.957836708502562,
+      "width": 5.983024963441981,
+      "height": 1.098041483567231,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "UHAUL",
+      "confidence": 0.5,
+      "yaw": -72.3589372577947,
+      "pitch": -6.221339958565139,
+      "width": 2.627525225369972,
+      "height": 0.822993598805648,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "NEW YORK STATE II",
+      "confidence": 1.0,
+      "yaw": -5.949825623525591,
+      "pitch": 12.925680420103173,
+      "width": 13.139916869585676,
+      "height": 4.215894866650345,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "Phone. 718-443-5959",
+      "confidence": 1.0,
+      "yaw": -5.905254675206514,
+      "pitch": 4.953066934990915,
+      "width": 12.883907006180642,
+      "height": 2.8727255368017572,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "UTO",
+      "confidence": 0.30000001192092896,
+      "yaw": -43.81005108086809,
+      "pitch": 12.933780366386666,
+      "width": 1.7349714071955447,
+      "height": 1.5820491485505954,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "EPAIB",
+      "confidence": 0.30000001192092896,
+      "yaw": -43.860409734823044,
+      "pitch": 11.344122888947679,
+      "width": 2.5680554751217883,
+      "height": 2.280266024182385,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "NEW YORK STATE INSPECTION",
+      "confidence": 1.0,
+      "yaw": -2.7460942493888654,
+      "pitch": 10.140074107202091,
+      "width": 20.871923095304204,
+      "height": 1.460230235163685,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "TRANSMISSIONS",
+      "confidence": 1.0,
+      "yaw": 6.796794804133631,
+      "pitch": 8.595911430407499,
+      "width": 11.784225965129536,
+      "height": 1.302640915142467,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "AUTOMATIC AND STANDARD, ALLT /PF",
+      "confidence": 1.0,
+      "yaw": 0.3331115728612917,
+      "pitch": 6.725182384150996,
+      "width": 26.498786032750353,
+      "height": 2.1563360707726265,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "20YEARS EXPERIENCE&*",
+      "confidence": 1.0,
+      "yaw": -3.2443989719882484,
+      "pitch": 5.398419488669831,
+      "width": 19.243591286985442,
+      "height": 1.5332043085190943,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "/ Fax. 718",
+      "confidence": 1.0,
+      "yaw": 4.322277088473037,
+      "pitch": 3.9013980485094097,
+      "width": 6.947301486991548,
+      "height": 1.5052554712098787,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "NSPECTION",
+      "confidence": 1.0,
+      "yaw": 3.6626814427493457,
+      "pitch": 13.423909467232903,
+      "width": 8.042464314896243,
+      "height": 3.579042731784357,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "ModellA",
+      "confidence": 0.5,
+      "yaw": 44.91570760214631,
+      "pitch": 10.707260650086335,
+      "width": 5.175290248359279,
+      "height": 2.16758116290368,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "738-443-5959",
+      "confidence": 1.0,
+      "yaw": 64.15639459067606,
+      "pitch": 4.487851850505816,
+      "width": 4.902628687036259,
+      "height": 0.9932018690246394,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "odeia.",
+      "confidence": 0.30000001192092896,
+      "yaw": 64.51079947764131,
+      "pitch": 8.514475679894124,
+      "width": 2.7140814602353025,
+      "height": 0.8145186921251177,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "NY STATE",
+      "confidence": 1.0,
+      "yaw": 64.30757624515905,
+      "pitch": 6.78628432739381,
+      "width": 3.651421988201623,
+      "height": 1.016897818895118,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "'INSPECTIOR",
+      "confidence": 0.5,
+      "yaw": 63.970407889176016,
+      "pitch": 5.8095210093133325,
+      "width": 4.8405453565169765,
+      "height": 0.9890820712339874,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    }
+  ]
+}

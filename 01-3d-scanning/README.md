@@ -81,7 +81,9 @@ The result is a textured 3D mesh of the scene. Our 78-image set produced a mesh 
 
 Go to **Workflow → Build Texture** to project the photo color data onto the mesh. This gives the model its photorealistic appearance.
 
-![Textured mesh result](assets/metashape-build-texture.png)
+![Textured mesh result](assets/metashape-textured.png)
+
+The result is a recognizable reconstruction of Amherst St. and the surrounding buildings. One quirk: the Media Lab's E14 building (right side) has a distinctive window grid pattern that creates moiré-like artifacts in the texture — the repetitive glass facade confuses the feature matching and produces some visual noise. This is a common challenge with highly repetitive architectural surfaces.
 
 > **Note:** Metashape cannot export camera parameters in COLMAP format while preserving the spherical model — because COLMAP simply doesn't have that model type. So if your downstream pipeline needs COLMAP data (e.g., for gaussian splatting with gsplat/Nerfstudio), you'll need the split approach below.
 
@@ -158,11 +160,13 @@ Upload the 234 split perspective images to **[Polycam](https://poly.cam)**. Poly
 
 ![Polycam textured mesh result from 234 perspective views](assets/polycam-textured-mesh.png)
 
-The mesh quality is noticeably rough — stretched textures, distorted geometry on buildings, and sparse detail overall. This is the trade-off of the compromise config: with only 3 perspective views per panorama (horizon-only, no upward or downward views), there simply isn't enough angular coverage for Polycam to reconstruct clean geometry. The 18-view config would produce significantly better results, but Polycam's 300-image limit forces the compromise. For higher-quality meshes from 360 photos, Metashape (Approach 1) or an offline tool like RealityCapture with the full 1,404-image set is the way to go.
+The mesh quality is noticeably rough — stretched textures, distorted geometry on buildings, and the trees along the street are essentially missing (reduced to flat smears). Photogrammetry meshes need dense, multi-angle coverage to reconstruct thin, complex geometry like branches and foliage, and 3 horizon-only views per panorama just isn't enough. Compare this to the Metashape result above, which at least captures the tree canopy structure. This is the trade-off of the compromise config: with only 3 perspective views per panorama (horizon-only, no upward or downward views), there simply isn't enough angular coverage for clean reconstruction. The 18-view config would produce significantly better results, but Polycam's 300-image limit forces the compromise. For higher-quality meshes from 360 photos, Metashape (Approach 1) or an offline tool like RealityCapture with the full 1,404-image set is the way to go.
 
 **Gaussian Splat** — photorealistic, view-dependent rendering. Great for capturing lighting, reflections, and semi-transparent materials. Best viewed in a splat viewer.
 
-![Polycam gaussian splat result](assets/polycam-gsplat.png)
+[![Polycam gaussian splat result from 234 perspective views](assets/polycam-splat.png)](https://poly.cam/capture/02ccdfc5-f22c-418a-a0e9-c1a09d979c2e)
+
+The splat fares better than the mesh — you can make out the trees, the brick buildings, and the general layout of the street. But the fidelity is limited: details are soft, and there's a lot of floating splat noise around the edges. Again, 234 images from horizon-only views is the bottleneck. With the full 1,404-image set and a tool like Postshot or Nerfstudio, the splat quality would be substantially better.
 
 ### Other Reconstruction Tools
 

@@ -69,11 +69,19 @@ for r in result.results:
     print(f"{r.text}  (yaw={r.yaw:.1f}°, pitch={r.pitch:.1f}°, conf={r.confidence:.2f})")
 ```
 
-## Hands-On: Cambridge Central Square
+## Hands-On
 
-We'll run PanoOCR on a 360° photo captured near the **Cambridge Central Square graffiti alley** and **H-Mart parking lot** — a spot dense with text on walls, signs, and street surfaces.
+We'll run PanoOCR on 360° photos we captured. The demo script processes one panorama at a time — change the `SAMPLE_IMAGE` path in `ocr_demo.py` to try different images.
 
-![Cambridge Central Square panorama](assets/IMG_20260207_010028_00_961.jpg)
+### Sample Panoramas
+
+**Cambridge Central Square** — graffiti alley and H-Mart parking lot. Dense with text on walls, signs, and street surfaces.
+
+![Cambridge Central Square panorama](assets/cambridge-central-square-pano.jpg)
+
+**Bushwick, Brooklyn** — under the elevated train tracks, surrounded by storefronts, signage, and street-level text.
+
+![Bushwick panorama](assets/bushwick-test-pano.jpg)
 
 ### Step 1: Run OCR
 
@@ -85,10 +93,10 @@ python ocr_demo.py
 ```
 
 This will:
-1. Load the panorama from `assets/IMG_20260207_010028_00_961.jpg`
+1. Load the panorama from `assets/cambridge-central-square-pano.jpg`
 2. Split it into perspective views and run OCR on each
 3. Print detected text with yaw/pitch coordinates and confidence scores
-4. Save results to `assets/ocr_results.json`
+4. Save results to `assets/cambridge-central-square-ocr.json` and `assets/bushwick-test-ocr.json`
 5. Show a matplotlib plot of detection positions overlaid on the panorama
 
 ### Step 2: Preview in 3D
@@ -104,7 +112,7 @@ Open [http://localhost:8000](http://localhost:8000) — the panorama and OCR res
 
 ### Output
 
-The script exports `assets/ocr_results.json` in the PanoOCR format:
+The script exports a JSON file per panorama (e.g. `assets/cambridge-central-square-ocr.json`) in the PanoOCR format:
 
 ```json
 {

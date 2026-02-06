@@ -1,0 +1,70 @@
+{
+  "image_path": "assets/cambridge-central-square-pano.jpg",
+  "perspective_preset": "custom",
+  "perspective_presets": null,
+  "results": [
+    {
+      "text": "AR SI",
+      "confidence": 0.5,
+      "yaw": -59.05732888682955,
+      "pitch": 37.728170848447185,
+      "width": 10.789863024943639,
+      "height": 5.061501396085248,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "6",
+      "confidence": 0.5,
+      "yaw": -59.516261330964774,
+      "pitch": 32.12499845711175,
+      "width": 3.092389615904448,
+      "height": 3.3450192590234984,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "ENDLESS",
+      "confidence": 1.0,
+      "yaw": -56.76450710066289,
+      "pitch": -6.526157118565827,
+      "width": 6.527385237878846,
+      "height": 5.19953323563231,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "COURAGE!",
+      "confidence": 1.0,
+      "yaw": -56.4263684152429,
+      "pitch": -10.766162029558123,
+      "width": 7.743122793578376,
+      "height": 6.238293305021024,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "MORAO",
+      "confidence": 1.0,
+      "yaw": -3.791764521517109,
+      "pitch": -33.527861075066035,
+      "width": 5.149737915169581,
+      "height": 4.840123437539859,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "HMART",
+      "confidence": 0.5,
+      "yaw": 31.58426423188074,
+      "pitch": 8.8400076597534,
+      "width": 7.374265005713639,
+      "height": 2.4390186878590594,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    },
+    {
+      "text": "RST KIM",
+      "confidence": 1.0,
+      "yaw": 37.79300085439746,
+      "pitch": 0.6661999868366353,
+      "width": 2.458681807980052,
+      "height": 0.9991845616274253,
+      "engine": "APPLE_VISION_FRAMEWORK"
+    }
+  ]
+}
