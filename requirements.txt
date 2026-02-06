@@ -8,7 +8,7 @@ jupyter
 # Panorama OCR (Chapter 02)
 # For macOS: pip install "panoocr[macocr]"
 # For Windows/Linux: pip install "panoocr[paddleocr]"
-panoocr
+panoocr[macocr]
 
 # Google Street View (Chapter 04)
 streetlevel
@@ -16,4 +16,4 @@ streetlevel
 # Object Segmentation (Chapter 03)
 # Requires GPU for reasonable performance and HuggingFace auth.
 # pip install "panosam[full]"
-panosam
+panosam[full]

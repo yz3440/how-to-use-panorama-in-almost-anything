@@ -4,6 +4,10 @@ OCR on 360 Images — Hands-On Demo
 
 Run text recognition on a panoramic image using PanoOCR and explore the results.
 
+This demo uses a 360° photo captured near the Cambridge Central Square graffiti
+alley and H-Mart parking lot — a spot with plenty of visible text on walls,
+signs, and street surfaces.
+
 PanoOCR handles the hard part automatically:
   1. Splits the equirectangular panorama into overlapping perspective views
   2. Runs an OCR engine on each view
@@ -28,29 +32,19 @@ import matplotlib.pyplot as plt
 # 1. Configuration
 # ---------------------------------------------------------------------------
 
-SAMPLE_IMAGE = "assets/sample_panorama.jpg"
+SAMPLE_IMAGE = "assets/IMG_20260207_010028_00_961.jpg"
+OUTPUT_JSON = "assets/ocr_results.json"
 
 # ---------------------------------------------------------------------------
-# 2. Load a sample panorama
-#    Place an equirectangular panorama at assets/sample_panorama.jpg, or
-#    this script will download one from Google Street View automatically.
+# 2. Load the panorama
+#    Captured near Cambridge Central Square graffiti alley & H-Mart parking lot.
 # ---------------------------------------------------------------------------
 
 if not os.path.exists(SAMPLE_IMAGE):
-    print("No sample image found. Downloading from Google Street View...")
-    from streetlevel import streetview
-
-    # Near MIT Media Lab — a spot with plenty of visible text
-    pano = streetview.find_panorama(42.3625, -71.0862)
-    if pano:
-        os.makedirs("assets", exist_ok=True)
-        streetview.download_panorama(pano, SAMPLE_IMAGE, zoom=4)
-        print(f"Downloaded panorama {pano.id} ({pano.date})")
-    else:
-        raise FileNotFoundError(
-            "Could not find a panorama. "
-            "Please place an image at assets/sample_panorama.jpg"
-        )
+    raise FileNotFoundError(
+        f"Image not found: {SAMPLE_IMAGE}\n"
+        "Please ensure the panorama image is in the assets/ directory."
+    )
 
 img = Image.open(SAMPLE_IMAGE)
 print(f"Image size: {img.size[0]} x {img.size[1]}")
@@ -58,7 +52,7 @@ print(f"Image size: {img.size[0]} x {img.size[1]}")
 plt.figure(figsize=(16, 8))
 plt.imshow(img)
 plt.axis("off")
-plt.title("Sample Panorama (equirectangular)")
+plt.title("Cambridge Central Square — Graffiti Alley & H-Mart (equirectangular)")
 plt.tight_layout()
 plt.show()
 
@@ -115,9 +109,8 @@ for r in sorted_results[:20]:
 #    The JSON file works with PanoOCR's interactive 3D preview tool.
 # ---------------------------------------------------------------------------
 
-output_path = "assets/ocr_results.json"
-result.save_json(output_path)
-print(f"\nResults saved to {output_path}")
+result.save_json(OUTPUT_JSON)
+print(f"\nResults saved to {OUTPUT_JSON}")
 
 # ---------------------------------------------------------------------------
 # 7. Visualize: plot detection positions on the panorama
@@ -138,16 +131,14 @@ plt.tight_layout()
 plt.show()
 
 # ---------------------------------------------------------------------------
-# 8. Interactive 3D preview (optional)
-#    For a much richer visualization, use PanoOCR's web-based preview tool:
+# 8. Interactive 3D preview
+#    Open the preview tool to visualize OCR results on the panorama sphere:
 #
-#      git clone https://github.com/yz3440/panoocr.git
-#      cd panoocr/preview
+#      cd preview
 #      python -m http.server 8000
 #
-#    Then open http://localhost:8000 and drag in:
-#      1. The panorama image  (assets/sample_panorama.jpg)
-#      2. The JSON results    (assets/ocr_results.json)
+#    Then open http://localhost:8000 — the panorama and OCR results load
+#    automatically from the assets/ directory.
 #
-#    You'll see the OCR results positioned on an interactive 3D sphere.
+#    You can also drag in different panorama images and JSON result files.
 # ---------------------------------------------------------------------------

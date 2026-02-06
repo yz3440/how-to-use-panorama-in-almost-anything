@@ -69,41 +69,60 @@ for r in result.results:
     print(f"{r.text}  (yaw={r.yaw:.1f}°, pitch={r.pitch:.1f}°, conf={r.confidence:.2f})")
 ```
 
-## Hands-On
+## Hands-On: Cambridge Central Square
 
-See **[`ocr_demo.py`](ocr_demo.py)** for the walkthrough script.
+We'll run PanoOCR on a 360° photo captured near the **Cambridge Central Square graffiti alley** and **H-Mart parking lot** — a spot dense with text on walls, signs, and street surfaces.
 
-## Previewing Results
+![Cambridge Central Square panorama](assets/IMG_20260207_010028_00_961.jpg)
 
-PanoOCR includes an **interactive 3D preview tool** that visualizes OCR results positioned on the panorama sphere.
+### Step 1: Run OCR
 
-![PanoOCR preview tool](assets/panoocr-preview.png)
-
-### Option 1: From the PanoOCR repo
+Run the demo script to process the panorama and save the results as JSON:
 
 ```bash
-git clone https://github.com/yz3440/panoocr.git
-cd panoocr/preview
+cd 02-ocr-360
+python ocr_demo.py
+```
+
+This will:
+1. Load the panorama from `assets/IMG_20260207_010028_00_961.jpg`
+2. Split it into perspective views and run OCR on each
+3. Print detected text with yaw/pitch coordinates and confidence scores
+4. Save results to `assets/ocr_results.json`
+5. Show a matplotlib plot of detection positions overlaid on the panorama
+
+### Step 2: Preview in 3D
+
+Open the interactive preview to see OCR results positioned on the panorama sphere:
+
+```bash
+cd preview
 python -m http.server 8000
 ```
 
-Open `http://localhost:8000` and drag in your panorama image + JSON results file.
+Open [http://localhost:8000](http://localhost:8000) — the panorama and OCR results load automatically. You can also drag in different panorama images and JSON result files to explore other results.
 
-### Option 2: From the docs site
+### Output
 
-Visit [yz3440.github.io/panoocr](https://yz3440.github.io/panoocr/) — the preview tool may be accessible there.
+The script exports `assets/ocr_results.json` in the PanoOCR format:
+
+```json
+{
+  "results": [
+    {
+      "text": "GRAFFITI ALLEY",
+      "yaw": -45.2,
+      "pitch": 3.1,
+      "width": 12.5,
+      "height": 3.8,
+      "confidence": 0.92
+    }
+  ]
+}
+```
+
+Each detection includes the recognized `text`, its position on the sphere (`yaw`/`pitch` in degrees), angular size (`width`/`height`), and the OCR engine's `confidence` score.
 
 ---
 
 **Previous:** [Chapter 1 — 3D Scanning from 360](../01-3d-scanning/) · **Next:** [Chapter 3 — Object Segmentation](../03-object-segmentation/)
-
----
-
-## Suggested Assets to Add
-
-| Filename | Description |
-|----------|-------------|
-| `assets/alltext-nyc-screenshot.png` | Screenshot of [alltext.nyc](https://alltext.nyc) showing a search result |
-| `assets/panoocr-pipeline.png` | Diagram of the PanoOCR pipeline (split → OCR → convert → deduplicate) |
-| `assets/panoocr-preview.png` | Screenshot of the interactive 3D preview tool with OCR results |
-| `assets/sample_panorama.jpg` | A sample equirectangular panorama with visible text (for the notebook demo) |
