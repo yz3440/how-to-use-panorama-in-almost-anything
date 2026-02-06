@@ -15,6 +15,8 @@ This workshop introduces a universal pattern that works across nearly every appl
 ```mermaid
 graph LR
     A["360° Panorama<br/>(equirectangular)"] --> B["Split into multiple<br/>perspective views"] --> C["Process with<br/>any CV tool"]
+    A --> C
+    C--> D["Creative<br/>applications"]
 ```
 
 This same approach powers 3D scanning, text recognition, object segmentation, and more — all from panoramic imagery.
