@@ -52,7 +52,7 @@ There are good reasons to keep this raw representation:
 
 - **Lossless original** — stitching into equirectangular is a resampling/warping step that destroys some information. Keeping the raw fisheye means you can re-stitch later with better algorithms, different horizon correction, or updated calibration.
 - **Calibration flexibility** — the exact stitch depends on lens alignment, which can vary slightly between units or even sessions. Raw files let you recalibrate.
-- **Smaller file** — the two fisheye circles occupy less pixel area than a full equirectangular image (the black corners are ignored), so the raw file is more storage-efficient.
+- **Smaller file** — the two fisheye circles occupy less pixel area than a full equirectangular image (the black corners are ignored), so the raw file is more storage-efficient. Even so, each 72 MP `.insp` file is about **30 MB**, so plan storage accordingly for large interval-shooting sessions.
 
 ### What Is Equirectangular Projection?
 
@@ -102,16 +102,34 @@ The raw files from the camera (`.insp` for photos, `.insv` for video) are in Ins
 
 ### Conversion Workflow
 
-1. **Import** — drag `.insp` / `.insv` files into Insta360 Studio
-2. **Horizon correction** — enable FlowState stabilization to level the horizon. This is important: a tilted horizon breaks downstream processing.
-3. **Export** — choose **Equirectangular** projection, export as JPEG (photos) or MP4 (video)
-4. **Batch export** — select multiple files and export at once (no quantity limit)
+1. **Import** — drag `.insp` / `.insv` files into Insta360 Studio.
+2. **Select all** — choose the files you want to export (or select all for a batch).
+3. **Export 360 photo** — open the Photo Export Settings dialog and set:
+   - **Media Type → Photo Sequence** — this exports each selected file as an individual JPEG rather than a single merged output.
+   - **Output Format → JPG**
+   - **Stabilization Type → Motion** — this applies **automatic horizontal correction**, leveling the horizon in every frame. A level horizon is critical: tilted panoramas break downstream 3D reconstruction, OCR, and segmentation.
+   - **Resolution** — leave at maximum (e.g. 11904 × 5952 for 72 MP mode).
+4. **Start Export** — hit "Start Export" or "Add to Queue" for batch processing. There's no quantity limit, so you can export an entire interval-shooting session at once.
+
+![Insta360 Studio — export settings with Photo Sequence and Motion stabilization](assets/insta360-studio-export-ui.png)
 
 ### Output
 
-After export, you'll have standard equirectangular JPEGs (typically 5888×2944 or larger) that work with any panorama viewer or processing tool.
+After export, you'll have standard equirectangular JPEGs at **11904 × 5952** pixels (in 72 MP mode) that work with any panorama viewer or processing tool.
 
 These are the files we'll use in all subsequent chapters.
+
+## Sample Captures Around the Media Lab
+
+We captured **78 photos** along Amherst St. around the MIT Media Lab using the Insta360 X4 on the 300 cm (10 ft) extended selfie stick. During the shoot we experimented with different extension lengths — raising and lowering the stick between shots — so the camera height varies from roughly head-height to the full 3-meter reach. You'll see these varying camera positions clearly in the 3D reconstruction in Chapter 1.
+
+Below are a few of the exported equirectangular JPEGs (11904 × 5952 pixels each). Notice the 2:1 aspect ratio, the stretched poles, and the completely invisible selfie stick.
+
+![Sample 360 capture — Media Lab, Amherst St.](assets/IMG_20260207_000207_00_888.jpg)
+
+![Sample 360 capture — Media Lab, Amherst St.](assets/IMG_20260207_000634_00_929.jpg)
+
+![Sample 360 capture — Media Lab, Amherst St.](assets/IMG_20260207_000950_00_959.jpg)
 
 ---
 
