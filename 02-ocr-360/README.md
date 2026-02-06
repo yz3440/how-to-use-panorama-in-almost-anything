@@ -71,7 +71,7 @@ for r in result.results:
 
 ## Hands-On
 
-See **[`ocr_demo.ipynb`](ocr_demo.ipynb)** for the interactive notebook.
+See **[`ocr_demo.py`](ocr_demo.py)** for the walkthrough script.
 
 ## Previewing Results
 

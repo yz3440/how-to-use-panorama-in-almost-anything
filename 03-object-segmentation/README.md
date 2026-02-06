@@ -66,7 +66,7 @@ See the **[PanoSAM documentation](https://yz3440.github.io/panosam/)** for full 
 
 ## Hands-On
 
-See **[`segmentation_demo.ipynb`](segmentation_demo.ipynb)** for the interactive notebook.
+See **[`segmentation_demo.py`](segmentation_demo.py)** for the walkthrough script.
 
 The notebook walks through:
 1. Loading an equirectangular panorama

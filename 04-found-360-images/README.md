@@ -71,7 +71,7 @@ This is useful for systematic data collection across a region.
 
 ## Hands-On: MIT Campus Exercise
 
-See **[`gsv_demo.ipynb`](gsv_demo.ipynb)** for the interactive notebook.
+See **[`gsv_demo.py`](gsv_demo.py)** for the walkthrough script.
 
 The exercise walks through:
 
